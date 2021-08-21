@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Poppins", sans-serif ;
+}
+
+body {
+    background-color: #1b2029;
+    color: white;
+    font-weight: 500;
+    display: flex;
+}
+
+main {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+/* Titulo */
+main h1 {
+    color: #8880fe;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Social-Media */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.social-media img {
+    width: 35px;
+}
+
+/* Line Break */
+.alternative {
+    margin-top: 1rem;
+}
+
+.alternative span {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.3);
+    position: relative; /*Usado para que os pseudo-elements fiquem absolutos em relacão a tag SPAN e não a todo BODY*/
+}
+
+.alternative span::before{
+    position: absolute;
+    content: ''; /*Usado sempre que for utilazar esses pseudo-elements*/
+    height: 1px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 50%;
+    left: 50px;
+}
+
+.alternative span::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 50%; 
+    right: 50px;
+}
+
+/* Formulario */
+.formulario fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario fieldset label {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario fieldset label span {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.formulario fieldset label input {
+    background-color: #161923;
+    color: #959596;
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid #131313;
+    margin-top: 1rem;
+    outline: none; /*Tira a borda que forma quando "clicka" no input*/
+}
+
+.formulario button {
+    background-color: #6c63ff;
+    font-weight: 600;
+    color: white;
+    width: 50%;
+    padding: 10px;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.formulario button:hover {
+    background-color: #544bfa;
+    color: black;
+}
+
+/* Circulo */
+
+.imagens {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+}
+
+.imagens img {
+    width: 90%;
+}
+
+.circle {
+    position: absolute; /*Se o elemento "PAI" não for position:relative, ele vai ser absolute sobre todo o BODY*/
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #E8CBC0, #636fa4);
+    top: 0;  /* Para que ocupe todo o BODY */
+    left: 0; /* Para que ocupe todo o BODY */
+
+    /* "Recorta" o nosso elemento para que ele vire um circulo */
+    clip-path: circle(40% at right 75%);  
+    z-index: -1; /*Se funciona com position diferente de static(padrão)*/
+
+    /*Propriedade das camadas, usado para para sobrepor elementos, nesse caso ele é negativo oque faz com que fique por baixo de outro elemento*/ 
+}
+
