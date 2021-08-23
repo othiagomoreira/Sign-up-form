@@ -13,21 +13,21 @@ body {
     color: white;
     font-weight: 500;
     display: flex;
-}
+} 
 
 main {
     width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 }
 
 /* Titulo */
 main h1 {
     color: #8880fe;
     font-size: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 /* Social-Media */
@@ -87,7 +87,7 @@ main h1 {
 
 .formulario fieldset label span {
     font-size: 1.2rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .formulario fieldset label input {
@@ -121,9 +121,9 @@ main h1 {
 /* Circulo */
 
 .imagens {
+    width: 50vw;
     display: flex;
     align-items: flex-end;
-    justify-content: right;
 }
 
 .imagens img {
@@ -139,7 +139,7 @@ main h1 {
     left: 0; /* Para que ocupe todo o BODY */
 
     /* "Recorta" o nosso elemento para que ele vire um circulo */
-    clip-path: circle(40% at right 75%);  
+    clip-path: circle(50% at right 80%);  
     z-index: -1; /*Se funciona com position diferente de static(padrão)*/
 
     /*Propriedade das camadas, usado para para sobrepor elementos, nesse caso ele é negativo oque faz com que fique por baixo de outro elemento*/ 
